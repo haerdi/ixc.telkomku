@@ -1,6 +1,12 @@
+<?php
+  include "koneksi_db.php";
+  
+?>
+
+
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com  -->
-<!--  Last Published: Wed Dec 20 2017 04:07:06 GMT+0000 (UTC)  -->
+<!--  Last Published: Tue Dec 19 2017 09:47:38 GMT+0000 (UTC)  -->
 <html data-wf-page="5a376fa257775c0001b20ba3" data-wf-site="59fd0c1ae534be0001f52c86">
 <head>
   <meta charset="utf-8">
@@ -10,7 +16,7 @@
   <meta content="Webflow" name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <link href="css/webflow.css" rel="stylesheet" type="text/css">
-  <link href="css/ixctelkomku.webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/digitaltouchpoint.webflow.css" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js" type="text/javascript"></script>
   <script type="text/javascript">WebFont.load({  google: {    families: ["Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic","Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic","Changa One:400,400italic","Oswald:200,300,400,500,600,700","Merriweather:300,300italic,400,400italic,700,700italic,900,900italic","Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","Droid Serif:400,400italic,700,700italic","Bitter:400,700,400italic","Exo:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic","Droid Sans:400,700","Inconsolata:400,700","PT Sans:400,400italic,700,700italic","Righteous:regular:latin-ext,latin","Berkshire Swash:regular:latin-ext,latin","Bilbo Swash Caps:regular","Damion:regular"]  }});</script>
   <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
@@ -57,23 +63,58 @@
 <body>
   <div data-collapse="medium" data-animation="default" data-duration="400" class="navbar w-nav">
     <div id="Home" class="section-12"><a href="index.html" class="brand w-nav-brand"><img src="images/logo-telkom.png" width="80.5"></a>
-      <nav role="navigation" class="nav-menu w-nav-menu"><a id="home" href="index.html" class="navlink w-nav-link">Home</a><a href="#Kajian" id="home" class="navlink w-nav-link">UPLOAD KAJIAN &amp; DOC.STDR</a><a href="#End-Section" class="navlink w-nav-link">Customer Contact</a></nav>
+      <nav role="navigation" class="nav-menu w-nav-menu"><a id="home" href="index.html" class="navlink w-nav-link">Home</a><a href="#Kajian" id="home" class="navlink w-nav-link">UPLOAD KAJIAN &amp; DOC. STDR</a><a href="#End-Section" class="navlink w-nav-link">Customer Contact</a></nav>
     </div>
   </div>
   <div id="Kajian" class="section-14">
     <div class="container-13 w-container">
-      <h2 class="heading-2 mobile upload"> Kajian &amp; Dokumen Standard</h2>
-      <h3 class="heading-19">upload kajian &amp; dokument standard Lab anda disini...</h3>
+      <h2 class="heading-2 mobile upload"> Upload Kajian &amp; Dokumen Standard</h2>
       <div class="div-block-12">
+	  
         <div class="form-block w-form">
-          <form id="wf-form-Email-Form" name="wf-form-Email-Form" data-name="Email Form"><label for="Judul" class="field-label">Judul Kajian :</label><input type="text" class="text-field w-input" maxlength="256" autofocus="true" name="Judul" data-name="Judul" placeholder="Tulis judul kajian anda disini.." id="Judul" required=""><label for="Jenis-Kajian-2" class="field-label-2">Jenis Dokumen :</label><select id="field" name="field" required="" class="text-field w-select"><option value="">Jenis Dokumen...</option><option value="Kajian">Kajian</option><option value="Dokumen Standar">Document Standard</option></select><label for="Email-3" class="field-label-3">PIC Email Address :</label><input type="email" class="text-field w-input" maxlength="256" name="Email" data-name="Email" placeholder="Email PIC.." id="Email-3" required=""><label for="Lab" class="field-label-4">Lab :</label><select name="field-2" required="" class="text-field w-select"><option value="">Lab Pemilik Dokumen...</option><option value="IXC">Lab IXC</option><option value="BAN">Lab BAN</option><option value="BCN">Lab BNC</option><option value="CNP">Lab CNP</option><option value="FMC">Lab FMC</option><option value="IIS">Lab IIS</option><option value="SOB">Lab SOB</option></select><label for="Desc" class="field-label-5">Deskripsi Kajian :</label><input type="text" class="text-field w-input" maxlength="256" name="Desc" data-name="Desc" placeholder="Deskripsi tentang kajian / dokumen standard Lab anda.." id="Desc" required=""><label for="File" class="field-label-5">File :</label><input type="text" class="text-field w-input" maxlength="256" name="File" data-name="File" placeholder="Input File Kajian / Dokumen Standard Lab anda disini.." id="File" required=""><input type="submit" value="Upload.." data-wait="Please wait Bosku..." class="button w-button"></form>
-          <div class="success-message w-form-done">
-            <div class="text-block-12">Terima Kasih ! Dokumen Anda Sudah Kami Terima !</div>
-          </div>
-          <div class="error-message w-form-fail">
-            <div>Oops! Something went wrong while submitting the form.</div>
-          </div>
+          
+			<form class="form-horizontal" role="form" method="post" enctype="multipart/form-data"   action="act_upload_dtp.php" id="wf-form-Email-Form" name="wf-form-Email-Form" data-name="Email Form">
+		  
+				<label for="Judul" class="field-label">Judul Kajian</label>
+					<input type="text" class="text-field w-input" maxlength="256" autofocus="true" name="judul" data-name="Judul" placeholder="Judul Kajian/Document Standard" id="Judul" required="">
+		 
+				<label for="Jenis-Kajian-2" class="field-label-2">Jenis Dokumen</label>
+					<select id="field" name="jenis_file" required="" class="text-field w-select">
+						<option value="">-- Pilih Jenis Dokumen --</option>
+						<option value="Kajian">Kajian</option>
+						<option value="Dokumen Standar">Document Standard</option>
+					</select>
+		  
+				<label for="Email-3" class="field-label-3">PIC Email Address</label>
+					<input type="email" class="text-field w-input" maxlength="256" name="email" data-name="Email" placeholder="Email Address" id="Email-3" required="">
+		
+				<label for="Lab" class="field-label-4">Lab</label>
+					<select name="jenis_lab" required="" class="text-field w-select">
+						<option value="">-- Pilih Lab Dokumen --</option>
+						<option value="IXC">Lab IXC</option>
+						<option value="BAN">Lab BAN</option>
+						<option value="BCN">Lab BNC</option>
+						<option value="CNP">Lab CNP</option>
+						<option value="FMC">Lab FMC</option>
+						<option value="IIS">Lab IIS</option>
+						<option value="SOB">Lab SOB</option>
+					</select>
+			
+				<label for="Desc" class="field-label-5">Deskripsi Dokumen</label>
+					<textarea rows="3"onkeypress ="return textonly(event)" class="text-field w-input" name="deskripsi" data-name="Deskripsi" placeholder="Deskripsi Tentang Kajian/Dokumen Standard Lab" id="Desc" required=""></textarea>
+			
+				<label for="File" class="field-label-5">File</label>
+					<input type="file" name="nama_file" class="form-control" data-name="File" id="File" required="">
+			
+			</br>
+			</br>
+					<input type="submit" value="Upload" name="upload" data-wait="Please wait Bosku..." class="button w-button">
+		
+			</form>
+			
+         
         </div>
+		
       </div>
     </div>
   </div>
