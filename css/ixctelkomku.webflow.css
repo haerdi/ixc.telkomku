@@ -215,7 +215,6 @@
 }
 
 .heading-2.mobile {
-  margin-top: 0px;
   margin-bottom: 0px;
   padding-top: 0px;
   font-family: Righteous, sans-serif;
@@ -760,7 +759,7 @@
 .content-home {
   height: 700px;
   margin-top: 0px;
-  padding-top: 10px;
+  padding-top: 15px;
   padding-bottom: 20px;
 }
 
@@ -2784,7 +2783,7 @@
 }
 
 .container-15 {
-  margin-top: 20px;
+  margin-top: 175px;
   margin-bottom: 50px;
   padding: 10px 35px;
   border-style: solid none;
@@ -2831,7 +2830,7 @@
 .section-15 {
   height: 700px;
   margin-bottom: 0px;
-  padding-top: 75px;
+  padding-top: 10px;
   padding-bottom: 10px;
   background-image: -webkit-linear-gradient(270deg, rgba(230, 230, 250, .69), rgba(230, 230, 250, .69));
   background-image: linear-gradient(180deg, rgba(230, 230, 250, .69), rgba(230, 230, 250, .69));
@@ -3639,7 +3638,7 @@
     text-align: center;
   }
   .container-15 {
-    margin-top: 17px;
+    margin-top: 600px;
     padding-left: 35px;
   }
   .list-item-10 {
@@ -3650,7 +3649,7 @@
     align-items: center;
   }
   .link-15.heading-2 {
-    margin-left: -30px;
+    margin-left: -60px;
     padding-left: 0px;
     font-family: Exo, sans-serif;
     color: hsla(0, 0%, 40%, .77);
@@ -3663,9 +3662,9 @@
     font-size: 15px;
   }
   .section-15 {
-    margin-top: 0px;
-    margin-bottom: 35px;
-    padding-top: 100px;
+    margin-top: 75px;
+    margin-bottom: -50px;
+    padding-top: 0px;
     padding-bottom: 0px;
     background-image: none;
   }
