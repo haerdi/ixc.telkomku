@@ -431,10 +431,23 @@
 }
 
 .column-7 {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding-top: 25px;
-  padding-bottom: 0px;
+  display: block;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 40px 20px 0px 0px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   text-align: right;
 }
 
@@ -506,6 +519,7 @@
 
 .image-11 {
   height: 25%;
+  margin-right: 0px;
   padding-right: auto;
   padding-left: auto;
 }
@@ -890,6 +904,8 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  padding-right: 0px;
+  padding-left: 0px;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -2150,6 +2166,7 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  margin-right: 10px;
   margin-left: 10px;
   padding-left: 0px;
   -webkit-box-pack: center;
@@ -2901,19 +2918,49 @@
   padding-bottom: 30px;
 }
 
+.map {
+  margin-left: -30px;
+}
+
+.map-2 {
+  height: 100px;
+  margin-top: 0px;
+  padding-top: 0px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.image-32 {
+  margin-right: 10px;
+}
+
 @media (max-width: 991px) {
+  .button {
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center;
+  }
   .end-section {
     background-color: rgba(255, 136, 6, .99);
   }
   .column-7 {
     padding-top: 30px;
-    text-align: center;
+    text-align: right;
   }
   .column-15.telkom.fb {
     text-align: center;
   }
+  .heading-14 {
+    font-size: 10px;
+    line-height: 12px;
+  }
   .nav-menu {
     background-color: hsla(0, 0%, 40%, .67);
+  }
+  .map-2 {
+    height: 70px;
   }
 }
 
@@ -2925,8 +2972,26 @@
     font-weight: 600;
     text-align: right;
   }
-  .heading-2.mobile {
+  .container-5 {
+    padding-left: 20px;
+  }
+  .hero-subheading.sub {
     font-size: 20px;
+    line-height: 25px;
+  }
+  .button {
+    width: 30%;
+    margin-right: 0px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .heading.welcome {
+    font-size: 40px;
+  }
+  .heading-2.mobile {
+    font-size: 30px;
     line-height: 23px;
   }
   .image {
@@ -2959,15 +3024,44 @@
   .column-6 {
     text-align: center;
   }
+  .content-block.coba {
+    margin-bottom: 30px;
+    padding-left: 20px;
+  }
   .end-section {
     margin-top: 935px;
     padding-top: 0px;
+  }
+  .column-7 {
+    text-align: center;
+  }
+  .content-home {
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
   .column-15.telkom {
     text-align: center;
   }
   .column-15.telkom.fb {
     text-align: center;
+  }
+  .column-16 {
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    padding-left: 57px;
+    text-align: center;
+  }
+  .button-4.atas {
+    width: 25%;
+    margin-right: 0px;
+    margin-left: 200px;
+  }
+  .button-4.bawah {
+    width: 25%;
+    margin-right: 0px;
+    margin-left: 200px;
   }
   .column-29 {
     padding-left: 0px;
@@ -2986,6 +3080,40 @@
     padding-left: 12px;
     font-size: 13px;
     text-align: center;
+  }
+  .container-15 {
+    margin-top: 1200px;
+    margin-bottom: 0px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: rgba(230, 230, 250, .69);
+  }
+  .list-item-10 {
+    margin-top: 30px;
+    padding-top: 0px;
+    padding-left: 0px;
+  }
+  .link-15.heading-2 {
+    font-size: 30px;
+  }
+  .link-15.heading-2.bantek {
+    font-size: 30px;
+  }
+  .section-15 {
+    height: 500px;
+    margin-top: 100px;
+    margin-bottom: -100px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-image: none;
+  }
+  .image-33 {
+    margin-top: 17px;
+    margin-left: 17px;
+  }
+  .image-34 {
+    margin-top: 17px;
+    margin-left: 17px;
   }
 }
 
@@ -3065,8 +3193,10 @@
     text-align: left;
   }
   .button {
-    margin-left: 10px;
-    padding: 5px 20px;
+    width: 40%;
+    margin-right: 0px;
+    margin-left: 0px;
+    padding: 5px;
     -webkit-transition: background-color 200ms ease, color 500ms ease;
     transition: background-color 200ms ease, color 500ms ease;
     font-size: 12px;
@@ -3100,7 +3230,7 @@
     transition: color 600ms ease, color 500ms ease;
     font-family: Righteous, sans-serif;
     color: #666;
-    font-size: 33px;
+    font-size: 25px;
     line-height: 33px;
     font-weight: 500;
     text-align: center;
@@ -3117,7 +3247,8 @@
     text-align: center;
   }
   .content-block.coba {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    padding-top: 40px;
   }
   .end-section {
     margin-top: 1100px;
@@ -3129,6 +3260,7 @@
     margin-top: 0px;
   }
   .column-7 {
+    left: 0px;
     top: 0px;
     right: 0px;
     bottom: 0px;
@@ -3197,6 +3329,16 @@
   }
   .column-iis {
     margin-bottom: 20px;
+  }
+  .button-4.atas {
+    width: 50%;
+    margin-left: 75px;
+  }
+  .button-4.bawah {
+    width: 50%;
+    margin-left: 75px;
+    padding-right: 0px;
+    padding-left: 0px;
   }
   .gambar-cnp {
     margin-right: 15px;
@@ -3327,6 +3469,7 @@
     text-align: center;
   }
   .heading-14 {
+    margin-right: 5px;
     margin-left: 0px;
     padding-top: 10px;
     font-family: 'Droid Sans', sans-serif;
@@ -3495,6 +3638,7 @@
     text-align: center;
   }
   .container-15 {
+    margin-top: 600px;
     padding-left: 35px;
   }
   .list-item-10 {
@@ -3505,7 +3649,7 @@
     align-items: center;
   }
   .link-15.heading-2 {
-    margin-left: -31px;
+    margin-left: -60px;
     padding-left: 0px;
     font-family: Exo, sans-serif;
     color: hsla(0, 0%, 40%, .77);
@@ -3515,12 +3659,14 @@
   }
   .link-15.heading-2.bantek {
     margin-left: 0px;
+    font-size: 15px;
   }
   .section-15 {
-    margin-bottom: 0px;
-    padding-top: 10px;
-    background-image: -webkit-linear-gradient(270deg, rgba(230, 230, 250, .69), rgba(230, 230, 250, .69));
-    background-image: linear-gradient(180deg, rgba(230, 230, 250, .69), rgba(230, 230, 250, .69));
+    margin-top: 75px;
+    margin-bottom: -50px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-image: none;
   }
   .text-block-11 {
     padding-left: 4px;
@@ -3565,6 +3711,14 @@
   .image-31 {
     display: inline-block;
     padding-left: 0px;
+  }
+  .map-2 {
+    height: 80px;
+    margin-right: 10px;
+    padding-left: 75px;
+  }
+  .image-33 {
+    margin-top: 5px;
   }
 }
 
